@@ -2,6 +2,7 @@
 title: "Is tictactoe solved ?"
 date: 2021-02-28
 layout: post
+permalink: /tictactoe/
 ---
 Tictactoe is probably one of the easiest and earliest games played by humans. Here we try to answer the question: What does an optimal for tictactoe look like , and is there 'the' optimal solution ? 
 
