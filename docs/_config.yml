@@ -1,7 +1,7 @@
-title.html : "exp<sup>LEAD</sup>"
+title : "exp^LEAD"
 author: Sumedh
 email: guptesumedh+explead@gmail.com
-description:  EXPeriments for LEarning and ADaptation
+description:  EXPeriments for **LE**arning and ADaptation
 theme: minima
 # social links
 twitter_username: guptesumedh # DO NOT include the @ character, or else the build will fail!
