@@ -1,7 +1,6 @@
 ---
 title: "Welcome to my blog"
-date: 2021-02-27
+date: 2021-02-28
 layout: post
 ---
-
-Just a Demo Blog
+Is tictactoe solved ?
