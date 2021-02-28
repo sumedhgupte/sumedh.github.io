@@ -1,6 +1,6 @@
 ---
 title: "Is tictactoe solved ?"
-date: 2021-02-28
+date: 2021-02-25
 layout: post
 permalink: /tictactoe/
 ---
