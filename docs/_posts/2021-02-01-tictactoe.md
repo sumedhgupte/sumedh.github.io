@@ -17,6 +17,8 @@ The two players are denoted as Player 1 and Player 2, with Player 1 making the f
 
 The game works on the concept of an **observation**, which is a 4-tuple object that describes the current view of the game. 
 
+board : sequence of 9 integers, indicating mark for each cell
+
 ```json
 {
   "board": "sequence of 9 integers, indicating mark for each cell",
@@ -27,6 +29,10 @@ The game works on the concept of an **observation**, which is a 4-tuple object t
 ```
 
 The simulator returns an initial observation of the game using ''begin'' function, or can offer a new observation, when provided with an observation and an action(new mark position for player whose turn it is). This is done using ''forward'' function. A brief usage of these two functions is shown below.
+```python
+import Game
+Game.begin()
+```
 ```
 ## [1] 1 2 3 4 5
 ```
