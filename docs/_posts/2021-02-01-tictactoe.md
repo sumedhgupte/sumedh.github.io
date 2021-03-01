@@ -17,24 +17,13 @@ The two players are denoted as Player 1 and Player 2, with Player 1 making the f
 
 The game works on the concept of an **observation**, which is a 4-tuple object that describes the current view of the game. 
 
-board 
-: sequence of 9 integers, indicating mark for each cell
-
-turn 
-: indicates the player whose turn it is
-
-is_terminal 
-: indicates whether the game has ended
-score 
-: denotes the score of the game if it has ended, otherwise takes value 0
-
 ```json
-{
+(
   "board": "sequence of 9 integers, indicating mark for each cell",
   "turn": "indicates the player whose turn it is",
   "is_terminal": "indicates whether the game has ended",
   "score": "denotes the score of the game if it has ended, otherwise takes value 0"
-}
+)
 ```
 
 The simulator returns an initial observation of the game using ''begin'' function, or can offer a new observation, when provided with an observation and an action(new mark position for player whose turn it is). This is done using ''forward'' function. A brief usage of these two functions is shown below.
