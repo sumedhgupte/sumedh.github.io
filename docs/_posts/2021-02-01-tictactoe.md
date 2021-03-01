@@ -23,7 +23,7 @@ The game works on the concept of an **observation**, which is a 4-tuple object t
 3. is_terminal : indicates whether the game has ended
 4. score : denotes the score of the game if it has ended, otherwise takes value 0
 
-![tictactoe game!](/assets/images/x_and_o.png "tictactoe game view")
+![tictactoe game!](../assets/images/x_and_o.png "tictactoe game view")
 
 Above game view can be represented as following Observation object:
 
