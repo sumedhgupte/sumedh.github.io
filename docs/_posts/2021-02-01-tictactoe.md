@@ -16,15 +16,10 @@ Tictactoe is a two player game, played on a 3X3 board, where players alternate i
 The two players are denoted as Player 1 and Player 2, with Player 1 making the first move. The game ends with a single score, that takes values from {1, 0, -1} indicating Player 1 wins, Draw and Player 2 wins respectively. For visual representations, consider marks for players 1 and 2 to be 'X' and 'O' respectively, although the simulator uses numbers 1 and 2 to denote marks for the corresponding players. 0 is used to denote empty or unmarked cell. 
 
 The game works on the concept of an **observation**, which is a 4-tuple object that describes the current view of the game. 
-
-```json
-(
-  "board": "sequence of 9 integers, indicating mark for each cell",
-  "turn": "indicates the player whose turn it is",
-  "is_terminal": "indicates whether the game has ended",
-  "score": "denotes the score of the game if it has ended, otherwise takes value 0"
-)
-```
+1. board : sequence of 9 integers, indicating mark for each cell
+2. turn : indicates the player whose turn it is
+3. is_terminal : indicates whether the game has ended
+4. score : denotes the score of the game if it has ended, otherwise takes value 0
 
 The simulator returns an initial observation of the game using ''begin'' function, or can offer a new observation, when provided with an observation and an action(new mark position for player whose turn it is). This is done using ''forward'' function. A brief usage of these two functions is shown below.
 ```python
