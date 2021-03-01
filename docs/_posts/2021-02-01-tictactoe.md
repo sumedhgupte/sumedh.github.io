@@ -28,7 +28,7 @@ The game works on the concept of an **observation**, which is a 4-tuple object t
 Above game view can be represented as following Observation object:
 
 ```python
-Game.Observation(
+(
   board: array([1, 0, 2, 0, 1, 0, 0, 0, 2], dtype=int8),
   turn: 1,
   is_terminal: False,
@@ -40,7 +40,21 @@ We'll require two methods for running a game: ''begin'' and ''forward''. The for
 
 ```python
 import Game
-Game.begin()
+obs = Game.begin()
+print("at t=0: ", obs)
+obs = Game.forward(obs, 2)
+print("at t=1: ", obs)
+```
+Output 
+:
+```python
+at t=0: Game.Observation(board=array([0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int8), turn=1, is_terminal=False, score=0)
+at t=1: Game.Observation(board=array([0, 0, 1, 0, 0, 0, 0, 0, 0], dtype=int8), turn=2, is_terminal=False, score=0)
+```
+
+```python
+import Game
+obsGame.begin()
 ```
 Output 
 :
