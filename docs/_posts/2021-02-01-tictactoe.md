@@ -7,6 +7,8 @@ permalink: /tictactoe/
 Tictactoe is probably one of the easiest and earliest games played by humans. Here we try to answer the question: What does an optimal strategy for tictactoe look like , and is there **the** optimal strategy ? 
 
 >This post intentionally avoids using **only** ''reinforcement learning'' terminology, in order to cater to a broader audience.  
+>
+> Prerequisites: python, recursion, numpy 
 
 ### Tictactoe: Objective and Design
 #### Objective:
@@ -42,7 +44,7 @@ Game.begin()
 ```
 Output 
 :
-```
+```python
 Game.Observation(board=array([0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int8), turn=1, is_terminal=False, score=0)
 ```
 
