@@ -40,8 +40,10 @@ We'll require two methods for running a game: ''begin'' and ''forward''. The for
 import Game
 Game.begin()
 ```
+Output 
+:
 ```
-## Game.Observation(board=array([0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int8), turn=1, is_terminal=False, score=0)
+Game.Observation(board=array([0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int8), turn=1, is_terminal=False, score=0)
 ```
 
 
