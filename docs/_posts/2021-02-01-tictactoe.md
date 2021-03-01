@@ -4,10 +4,10 @@ date: 2021-02-25
 layout: post
 permalink: /tictactoe/
 ---
-Tictactoe is probably one of the easiest and earliest games played by humans. Here we try to answer the question: What does an optimal strategy for tictactoe look like , and is there **the** optimal strategy ? 
+Tictactoe is probably one of the easiest and earliest games played by humans. Its easy to design a strategy that is _unbeatable_. But, does a better strategy exist ? 
 
 >This post intentionally avoids using **only** ''reinforcement learning'' terminology, in order to cater to a broader audience.  
->
+
 > Prerequisites: python, recursion, numpy 
 
 ### Tictactoe: Objective and Design
