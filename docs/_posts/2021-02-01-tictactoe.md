@@ -52,5 +52,5 @@ at t=0: Game.Observation(board=array([0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int8), t
 at t=1: Game.Observation(board=array([0, 0, 1, 0, 0, 0, 0, 0, 0], dtype=int8), turn=2, is_terminal=False, score=0)
 ```
 ### Solution Structure
-Anyone who has played tictactoe would agree that the general playing strategy is to choose actions such that you move closer to a win, and at the same time the opponent doesn't have a forced win. 
+Anyone who has played tictactoe would agree that the general playing strategy is to choose actions that take you closer to a win, and at the same time keeps opponent from forcing a win. A possible way to do this is by ranking each observation based on its _goodness_, and choosing actions that take you to the _best_ possible observation. To realise this, we must define what this _goodness_ is.  
 In this section, we seek to try to understand the way game evolves and This way of scoring allows us to vaguely define **value** of the game, as the expected score of the game when it terminates. Now we can write the objective of the game mathematically, for both the players 1 and 2 as simply maximizing or minimizing this value.
