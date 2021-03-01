@@ -36,7 +36,7 @@ Above game view can be represented as following Observation object:
 )
 ```
 
-We'll use two methods for running a game: ''begin'' and ''forward''. The former returns an initial observation of the game, while the latter returns a new observation, given current observation and an action(new mark position for player whose turn it is). 
+We'll use two methods for running a game: _begin_ and _forward_. The former returns an initial observation of the game, while the latter returns a new observation, given current observation and an **action**(new mark position for player whose turn it is). 
 
 ```python
 import Game
@@ -51,7 +51,6 @@ Output
 at t=0: Game.Observation(board=array([0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int8), turn=1, is_terminal=False, score=0)
 at t=1: Game.Observation(board=array([0, 0, 1, 0, 0, 0, 0, 0, 0], dtype=int8), turn=2, is_terminal=False, score=0)
 ```
-
-
-
-This way of scoring allows us to vaguely define **value** of the game, as the expected score of the game when it terminates. Now we can write the objective of the game mathematically, for both the players 1 and 2 as simply maximizing or minimizing this value.
+### Solution Structure
+Anyone who has played tictactoe would agree that the general playing strategy is to choose actions such that you move closer to a win, and at the same time the opponent doesn't have a forced win. 
+In this section, we seek to try to understand the way game evolves and This way of scoring allows us to vaguely define **value** of the game, as the expected score of the game when it terminates. Now we can write the objective of the game mathematically, for both the players 1 and 2 as simply maximizing or minimizing this value.
