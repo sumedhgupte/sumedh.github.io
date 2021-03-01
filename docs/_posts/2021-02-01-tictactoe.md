@@ -21,6 +21,9 @@ The game works on the concept of an **observation**, which is a 4-tuple object t
 3. is_terminal : indicates whether the game has ended
 4. score : denotes the score of the game if it has ended, otherwise takes value 0
 
+![tictactoe game!](/assets/images/XO.png "View of a tictactoe game")
+
+
 The simulator returns an initial observation of the game using ''begin'' function, or can offer a new observation, when provided with an observation and an action(new mark position for player whose turn it is). This is done using ''forward'' function. A brief usage of these two functions is shown below.
 ```python
 import Game
