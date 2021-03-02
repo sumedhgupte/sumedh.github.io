@@ -54,7 +54,7 @@ at t=1: Game.Observation(board=array([0, 0, 1, 0, 0, 0, 0, 0, 0], dtype=int8), t
 ### Solution Structure
 Anyone who has played tictactoe would agree that the general playing strategy is to choose actions that take you closer to a win, and at the same time keeps opponent from forcing a win. A possible way to do this is by ranking each observation based on its _goodness_, and making choosing actions that take you to the _best_ possible observation. To realise this, we must define what this _goodness_ is. 
 
-Mathematically speaking, this _goodness_ is simply a real-valued function defined on the set of observations. Since the observations share a causal relationship, we suppose that their values too must exhibit some **mathematical relation**. We introduce following notation to formalize this:
+Mathematically speaking, this _goodness_ is simply a real-valued function defined on the set of observations. Since the observations share a causal relationship, we suppose that their values too must exhibit some **mathematical relation**. We introduce following notation to formalize this idea:
 
 ![notations!](../notations.png "math notations")
 
@@ -62,7 +62,7 @@ It's interesting to note here that _goodness_ or f-value of any terminal observa
 We can see that we can arrive at the exact meaning of f once we choose what R and Phi are. 
 R is relatively easy to define. 'xRy' denotes a parent-child relationship between the observations x and y. Alternatively, y is a successor of x, such that there exists some action that can take the game from x to y.  Phi is a function applied on the set of _goodness_ or f-values of these successors. 
 
-Consider for now, that you are interested in finding one optimal action for every observation. Hence your strategy for any observation x involves finding an **optimal** successor y* and playing the action that drives the game to observation y*. If you do this, then the f-value of x is equal to that of y. This completes our definition of Phi, as the **optimal** f-value among the successors. terminal observations, we can simply assign f-value to be the score.the _goodness_ is already known, which is its score. It also kind of logical since a terminal observation has no successors. For remaining observations, **optimal** may mean either maximum or minimum, depending on whose turn it is. If it's of Player 1, then  
+Consider for now, that you are interested in finding one optimal action for every observation. Hence your strategy for any observation x involves finding an **optimal** successor y* and playing the action that drives the game to observation y*. If you do this, then the f-value of x is equal to that of y. This completes our definition of Phi as the **optimal** f-value among the successors. The terminal observations here act as base case for defining f-value as simply their respective scores. Afterall, its this very score that we're after. For remaining observations, **optimal** may mean either maximum or minimum, depending on whose turn it is. If it's of Player 1, then  
 
 ![recursive expression!](../f_recursive.png "recursive expression")
 
