@@ -54,8 +54,10 @@ at t=1: Game.Observation(board=array([0, 0, 1, 0, 0, 0, 0, 0, 0], dtype=int8), t
 ### Solution Structure
 Anyone who has played tictactoe would agree that the general playing strategy is to choose actions that take you closer to a win, and at the same time keeps opponent from forcing a win. A possible way to do this is by ranking each observation based on its _goodness_, and choosing actions that take you to the _best_ possible observation. To realise this, we must define what this _goodness_ is. 
 
-Mathematically speaking, this _goodness_ is simply a real valued function defined on the set of observations. Since the observations share a causal relationship, we suppose that their values too must exhibit some **mathematical relation**. We introduce some formal notation to describe this relation
+Mathematically speaking, this _goodness_ is simply a real valued function defined on the set of observations. Since the observations share a causal relationship, we suppose that their values too must exhibit some **mathematical relation**. We introduce following notation to formalize this:
 
 ![notations!](../notations.png "math notations")
+
+We can see that we can arrive at the exact meaning of f once we choose what R and Phi are. R is relatively easy to define. 'xRy' denotes a parent-child relationship between the observations. Alternatively, y is a successor of x, so one can reach observation y in the game by choosing some action from observation x. 
 
 In this section, we seek to try to understand the way game evolves and This way of scoring allows us to vaguely define **value** of the game, as the expected score of the game when it terminates. Now we can write the objective of the game mathematically, for both the players 1 and 2 as simply maximizing or minimizing this value.
