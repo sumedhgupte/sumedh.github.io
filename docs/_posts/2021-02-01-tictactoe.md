@@ -58,6 +58,6 @@ Mathematically speaking, this _goodness_ is simply a real valued function define
 
 ![notations!](../notations.png "math notations")
 
-We can see that we can arrive at the exact meaning of f once we choose what R and Phi are. R is relatively easy to define. 'xRy' denotes a parent-child relationship between the observations. Alternatively, y is a successor of x, so one can reach observation y in the game by choosing some action from observation x. 
+We can see that we can arrive at the exact meaning of f once we choose what R and Phi are. R is relatively easy to define. 'xRy' denotes a parent-child relationship between the observations x and y. Alternatively, y is a successor of x, so there exists some action that can take the game from x to y. Thus, Phi is a function applied on the set of _goodness_ values of these successors. One may notice that the operation performed by Phi depends on what strategy is used  
 
 In this section, we seek to try to understand the way game evolves and This way of scoring allows us to vaguely define **value** of the game, as the expected score of the game when it terminates. Now we can write the objective of the game mathematically, for both the players 1 and 2 as simply maximizing or minimizing this value.
