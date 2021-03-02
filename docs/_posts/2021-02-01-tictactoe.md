@@ -8,7 +8,7 @@ Tictactoe is probably one of the easiest and earliest games played by humans. It
 
 >This post intentionally avoids using **only** ''reinforcement learning'' terminology, in order to cater to a broader audience.  
 
-> Prerequisites: python, recursion, numpy 
+> _Prerequisites_: python, recursion, numpy, high-school maths 
 
 ### Tictactoe: Objective and Design
 #### Objective:
@@ -17,7 +17,7 @@ Tictactoe is a two player game, played on a 3X3 board, where players alternate i
 #### Design: 
 The two players are denoted as Player 1 and Player 2, with Player 1 making the first move. The game ends with a single score, that takes values from {1, 0, -1} indicating Player 1 wins, Draw and Player 2 wins respectively. For visual representations, consider marks for players 1 and 2 to be 'X' and 'O' respectively, although we'll use 1 and 2 to denote marks for the corresponding players. 0 is used to denote empty or unmarked cell. 
 
-The game works on the concept of an **observation**, which is a 4-tuple object that describes the current view of the game. 
+The game works on the concept of an **observation**, which is a 4-tuple object that describes the current view of the game. The elements of the tuple are:
 1. board : array of 9 integers, indicating mark for each cell
 2. turn : indicates the player whose turn it is
 3. is_terminal : indicates whether the game has ended
@@ -54,10 +54,14 @@ at t=1: Game.Observation(board=array([0, 0, 1, 0, 0, 0, 0, 0, 0], dtype=int8), t
 ### Solution Structure
 Anyone who has played tictactoe would agree that the general playing strategy is to choose actions that take you closer to a win, and at the same time keeps opponent from forcing a win. A possible way to do this is by ranking each observation based on its _goodness_, and choosing actions that take you to the _best_ possible observation. To realise this, we must define what this _goodness_ is. 
 
-Mathematically speaking, this _goodness_ is simply a real valued function defined on the set of observations. Making use of the fact that the observations share a causal relationship, we suppose that their values too must exhibit some **mathematical relation**, thus shifting our attention to **recursive functions**. We are ready to introduce some formal notation.
+Mathematically speaking, this _goodness_ is simply a real valued function defined on the set of observations. Since the observations share a causal relationship, we suppose that their values too must exhibit some **mathematical relation**. We introduce some formal notation to describe this relation.
 
-Let X denote the set of observations. Let R be a relation from X to X, indicating causality between the observations. Let the function be denoted by f:X -> Real. 
-We define the relationship between function values using the expression:
+Let X denote the set of observations. 
+Let the goodness function be denoted by f. 
+Thus f:X -> Real.
+Let R be a binary relation over X. indicating the causal relationship between the observations.
+We use this relation to define a recurrence relationship between function values:
 f(x) = Phi({y belong to X| R(x,y) exists})
+$\alpha$ \alpha
 
 In this section, we seek to try to understand the way game evolves and This way of scoring allows us to vaguely define **value** of the game, as the expected score of the game when it terminates. Now we can write the objective of the game mathematically, for both the players 1 and 2 as simply maximizing or minimizing this value.
