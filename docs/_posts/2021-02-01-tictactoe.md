@@ -56,6 +56,6 @@ Anyone who has played tictactoe would agree that the general playing strategy is
 
 Mathematically speaking, this _goodness_ is simply a real valued function defined on the set of observations. Since the observations share a causal relationship, we suppose that their values too must exhibit some **mathematical relation**. We introduce some formal notation to describe this relation
 
-![notations!](/f_def.png "math notations")
+![notations!](/notations.png "math notations")
 
 In this section, we seek to try to understand the way game evolves and This way of scoring allows us to vaguely define **value** of the game, as the expected score of the game when it terminates. Now we can write the objective of the game mathematically, for both the players 1 and 2 as simply maximizing or minimizing this value.
