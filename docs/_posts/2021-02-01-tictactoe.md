@@ -58,10 +58,7 @@ Mathematically speaking, this _goodness_ is simply a real valued function define
 
 ![notations!](./notations.png "math notations")
 
-$ \alpha $
-\begin{align}
-a &= \phi(s) \\
-b &= \gamma(g)
-\end{align}
+$$ \alpha $$
+
 
 In this section, we seek to try to understand the way game evolves and This way of scoring allows us to vaguely define **value** of the game, as the expected score of the game when it terminates. Now we can write the objective of the game mathematically, for both the players 1 and 2 as simply maximizing or minimizing this value.
