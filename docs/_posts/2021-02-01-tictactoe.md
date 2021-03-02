@@ -58,7 +58,11 @@ Mathematically speaking, this _goodness_ is simply a real-valued function define
 
 ![notations!](../notations.png "math notations")
 
-We can see that we can arrive at the exact meaning of f once we choose what R and Phi are. R is relatively easy to define. 'xRy' denotes a parent-child relationship between the observations x and y. Alternatively, y is a successor of x, so there exists some action that can take the game from x to y.  Phi is a function applied on the set of _goodness_ or f-values of these successors. Consider for now, that you are interested in finding one optimal action for every observation. Hence your strategy for any observation x involves finding an **optimal** successor y* and playing the action that drives the game to observation y*. By doing this, you end up assigning the goodness of y* to x. This completes our definition of Phi, as the **optimal** f-value among the successors. 
+It's interesting to note here that _goodness_ or f-value of any terminal observation is exactly 
+We can see that we can arrive at the exact meaning of f once we choose what R and Phi are. 
+R is relatively easy to define. 'xRy' denotes a parent-child relationship between the observations x and y. Alternatively, y is a successor of x, such that there exists some action that can take the game from x to y.  Phi is a function applied on the set of _goodness_ or f-values of these successors. 
+
+Consider for now, that you are interested in finding one optimal action for every observation. Hence your strategy for any observation x involves finding an **optimal** successor y* and playing the action that drives the game to observation y*. If you do this, then the f-value of x is equal to that of y. This completes our definition of Phi, as the **optimal** f-value among the successors. terminal observations, we can simply assign f-value to be the score.the _goodness_ is already known, which is its score. It also kind of logical since a terminal observation has no successors. For remaining observations, **optimal** may mean either maximum or minimum, depending on whose turn it is. If it's of Player 1, then  
 
 ![recursive expression!](../f_recursive.png "recursive expression")
 
