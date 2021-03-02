@@ -7,4 +7,5 @@ theme: minima
 twitter_username: guptesumedh # DO NOT include the @ character, or else the build will fail!
 github_username:  sumedhgupte # DO NOT include the @ character, or else the build will fail!
 markdown: kramdown
+mathjax: true
 show_excerpts: true # set to false to remove excerpts on the homepage
