@@ -59,14 +59,15 @@ Mathematically speaking, this _goodness_ is simply a real-valued function define
 
 ![notations!](../notations.png "math notations")
 
-We can see that we can arrive at the exact meaning of f once we choose what R and Phi are. 
-R is relatively easy to define. 'xRy' denotes a parent-child relationship between the observations x and y. Alternatively, y is a successor of x, such that there exists some action that takes the game from x to y.  Phi is a function applied on the set of _goodness_ or f-values of these successors. 
+For terminal observations, _goodness_ or f-value is just their scores. For others, we can arrive at the exact meaning of f once we choose what R and Phi are. 
+R is relatively easy to define. 'xRy' denotes a parent-child relationship between the observations x and y. Alternatively, y is a successor of x, such that there exists some action that takes the game from x to y.  Phi is a function applied on the set of f-values of these successors. 
 
-Consider for now, that you are interested in finding one optimal action for every observation. Hence your strategy for any observation x involves finding an **optimal** successor y* and playing the action that drives the game to observation y*. If you do this, then the f-value of x is equal to that of y*. This completes our definition of Phi as the **optimal** f-value among the successors. Since +1 means Player 1 wins the game and -1 means Player 2 wins the game, **optimal** can mean either maximum or minimum, depending on whose turn it is. For Player 1, optimal choice assigns maximum valued successor value to x, while for Player 2, optimal choice asigns the minimum valued successor to x. We finally arrive at the following recursive function:
+Consider for now, that you are interested in finding one optimal action for every observation. Hence your strategy for any observation x involves finding an **optimal** successor y* and playing the action that drives the game to observation y*. If you do this, then the f-value of x is equal to that of y*. This completes our definition of Phi as the optimal f-value among the successors. Since +1 means Player 1 wins the game and -1 means Player 2 wins the game, **optimal** can mean either maximum or minimum, depending on which side is playing. For Player 1, optimal choice assigns maximum valued successor value to x, while for Player 2, optimal choice asigns the minimum valued successor to x. We finally arrive at the following recursive function:
 
 ![recursive expression!](../f_recursive.png "recursive expression")
 
-
+This is not too different from the idea of Bellman's optimality principle, which suggests that optimal strategy can be achieved by 
+Backward induction
 \\
 \texttt{Let } X \texttt{ be the set of observations} \\
 \texttt{Let } R \texttt{ be a binary relation over } X \\
