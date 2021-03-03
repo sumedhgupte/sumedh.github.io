@@ -3,6 +3,7 @@ title: "Is tictactoe solved ?"
 date: 2021-02-25
 layout: post
 permalink: /tictactoe/
+published: false
 ---
 Tictactoe is probably one of the easiest and earliest games played by humans. Its easy to design a strategy that is _unbeatable_. But, does a better strategy exist ? 
 
@@ -65,3 +66,11 @@ Consider for now, that you are interested in finding one optimal action for ever
 
 ![recursive expression!](../f_recursive.png "recursive expression")
 
+
+\\
+\texttt{Let } X \texttt{ be the set of observations} \\
+\texttt{Let } R \texttt{ be a binary relation over } X \\
+\texttt{Let the goodness function be } f:X \to \mathbb{R} \texttt{, that satisfies the reccurence:} \\
+f(x)=\begin{cases} x.score, & \text{if } x.is\_terminal \\
+\phi(\{ f(y) \in X | (x,y) \in R \}) , & \text{otherwise}
+		 \end{cases}
