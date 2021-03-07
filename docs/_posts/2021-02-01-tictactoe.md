@@ -55,7 +55,7 @@ at t=1: Game.Observation(board=array([0, 0, 1, 0, 0, 0, 0, 0, 0], dtype=int8), t
 ### Solution Structure
 Anyone who has played tictactoe would agree that the general playing strategy is to choose actions that take you closer to a win, and at the same time keeps opponent from forcing a win. A possible way to do this is by ranking each observation based on its _goodness_, and making choosing actions that take you to the _best_ possible observation. To realise this, we must define what this _goodness_ is. 
 
-Mathematically speaking, this _goodness_ is simply a real-valued function defined on the set of observations. Also, since the observations share a causal relationship, we suppose that their values too must exhibit some **mathematical relation**. So _goodness_ of one observation A may be closeley related to observation B if B is likely to follow A in the game. We introduce following notation to formalize this idea:
+Mathematically speaking, this _goodness_ is simply a real-valued function defined on the set of observations. Also, since the observations share a causal relationship, we suppose that their values too must exhibit some **mathematical relation**. So _goodness_ of one observation x may be closeley related to observation y if y is likely to follow x in the game. We introduce following notation to formalize this idea:
 
 ![notations!](../notations.png "math notations")
 
