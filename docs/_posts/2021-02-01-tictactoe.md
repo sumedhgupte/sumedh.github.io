@@ -75,3 +75,5 @@ Backward induction
 f(x)=\begin{cases} x.score, & \text{if } x.is\_terminal \\
 \phi(\{ f(y) \in X | (x,y) \in R \}) , & \text{otherwise}
 		 \end{cases}
+		 
+underlying graph
