@@ -3,7 +3,7 @@ title: "Is tictactoe solved ?"
 date: 2021-02-25
 layout: post
 permalink: /tictactoe/
-published: false
+published: true
 ---
 Tictactoe is probably one of the easiest and earliest games played by humans. Its easy to design a strategy that is _unbeatable_. But, does a better strategy exist ? 
 
