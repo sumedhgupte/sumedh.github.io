@@ -7,8 +7,6 @@ published: true
 ---
 Tictactoe is probably one of the easiest and earliest games played by humans. Its easy to design a strategy that is _unbeatable_. But, does a better strategy exist ? 
 
->This post intentionally avoids using **only** ''reinforcement learning'' terminology, in order to cater to a broader audience.  
-
 > _Prerequisites_: python, recursion, numpy, high-school maths 
 
 ### Tictactoe: Objective and Design
