@@ -11,10 +11,10 @@ Tictactoe is probably one of the easiest and earliest games played by humans. It
 
 ### Tictactoe: Objective and Design
 #### Objective:
-Tictactoe is a two player game, played on a 3X3 board, where players alternate in choosing one of the nine cells to make their mark. The objective is to get three of your marks in a line, either vertical,horizontal or diagonal. If a player completes the objective, they win, and automatically, the opponent loses, and vice versa. If neither player has completed the objective and the board gets filled, the game ends in a draw.   
+Tictactoe is a two player game, played on a 3X3 board, where players alternate in choosing one of the nine cells to make their mark. The objective is to get three of your marks in a line, either vertically,horizontally or diagonally. If a player completes the objective, they win, and automatically, the opponent loses, and vice versa. If neither player has completed the objective and the board gets filled, the game ends in a draw.   
 
 #### Design: 
-The two players are denoted as Player 1 and Player 2, with Player 1 making the first move. The game ends with a single score, that takes values from {1, 0, -1} indicating Player 1 wins, Draw and Player 2 wins respectively. For visual representations, consider marks for players 1 and 2 to be 'X' and 'O' respectively, although we'll use 1 and 2 to denote marks for the corresponding players. 0 is used to denote empty or unmarked cell. 
+The two players are denoted as Player 1 and Player 2, with Player 1 making the first move. The game ends with a single score, that takes values from {1, 0, -1} indicating Player 1 wins, Draw and Player 2 wins respectively. For visual representations, consider marks for players 1 and 2 to be 'X' and 'O' respectively, while at all other times we'll use 1 and 2 to denote marks for the corresponding players. 0 is used to denote empty or unmarked cell. 
 
 The game works on the concept of an **observation**, which is a 4-tuple object that describes the current view of the game. The elements of the tuple are:
 1. board : array of 9 integers, indicating mark for each cell
@@ -51,9 +51,9 @@ at t=0: Game.Observation(board=array([0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int8), t
 at t=1: Game.Observation(board=array([0, 0, 1, 0, 0, 0, 0, 0, 0], dtype=int8), turn=2, is_terminal=False, score=0)
 ```
 ### Solution Structure
-Anyone who has played tictactoe would agree that the general playing strategy is to choose actions that take you closer to a win, and at the same time keeps opponent from forcing a win. A possible way to do this is by ranking each observation based on its _goodness_, and making choosing actions that take you to the _best_ possible observation. To realise this, we must define what this _goodness_ is. 
+Anyone who has played tictactoe would agree that the general playing strategy is to choose actions that take you closer to a win, and at the same time keeps opponent from forcing a win. A possible way to do this is by ranking each observation based on its _goodness_, and choosing actions that take you to the _best_ possible observation. To realise this, we must define what this _goodness_ is. 
 
-Mathematically speaking, this _goodness_ is simply a real-valued function defined on the set of observations. Also, since the observations share a causal relationship, we suppose that their values too must exhibit some **mathematical relation**. So _goodness_ of one observation x may be closeley related to observation y if y is likely to follow x in the game. We introduce following notation to formalize this idea:
+Mathematically speaking, this _goodness_ is simply a real-valued function defined on the set of observations. Also, since the observations share a causal relationship, we suppose that their _goodness_ values too must exhibit some **mathematical relation**. So _goodness_ of one observation x must be closely related to observation y if y is likely to follow x in the game. We introduce following notation to formalize this idea:
 
 ![notations!](../notations.png "math notations")
 
